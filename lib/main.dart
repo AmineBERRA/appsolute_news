@@ -1,8 +1,6 @@
-import 'dart:developer';
-
+import 'package:appsolute_news/View/list_view.dart';
 import 'package:flutter/material.dart';
 import 'Controller/api_news.dart';
-import 'Model/article_model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,28 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.red,
         centerTitle: true,
       ),
-      body: FutureBuilder(
-        future: client.getArticle(),
-        builder: (BuildContext context, AsyncSnapshot<List<Article>> snapshot) {
-          log(snapshot.error.toString());
-          if(snapshot.hasData){
-            List<Article>? articles = snapshot.data;
-            return ListView.builder(
-              //Now let's create our custom List tile
-              itemCount: articles!.length,
-              itemBuilder: (context, index) => ListTile(
-                title: Text(articles[index].title.toString()),
-                subtitle: Text(articles[index].source.name.toString()),
-              )
-
-            );
-            //return const Center(child: Text("BIG SUCCESS"),);
-          }
-          return const Center(
-            child: Text("NOT GOOD"),
-          );
-        },
-      ),
+      body: const ListViewPage(),
     );
   }
 }
