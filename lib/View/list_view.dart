@@ -28,7 +28,9 @@ class _ListViewPageState extends State<ListViewPage> {
                 itemBuilder: (context, index) => myListTile(articles[index], context)
             );
           }
-          return const CircularProgressIndicator();
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         },
       ),
     );

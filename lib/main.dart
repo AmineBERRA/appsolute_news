@@ -1,4 +1,5 @@
 import 'package:appsolute_news/View/list_view.dart';
+import 'package:appsolute_news/constant.dart';
 import 'package:flutter/material.dart';
 import 'Controller/api_news.dart';
 
@@ -35,8 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('AppSolute NEWS', style: TextStyle(fontWeight: FontWeight.bold),),
-        backgroundColor: Colors.red,
+        backgroundColor: redAppsolute,
         centerTitle: true,
+        elevation: 20,
       ),
       body: const ListViewPage(),
     );

@@ -14,12 +14,14 @@ class DetailsPage extends StatelessWidget {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: (){
+            onPressed: () {
               Share.share(article.url.toString());
             },
-            icon: const Icon(Icons.share,color: Colors.black,),
+            icon: const Icon(
+              Icons.share,
+              color: Colors.black,
+            ),
           )
-
         ],
         backgroundColor: Colors.transparent,
         elevation: 70,
@@ -55,29 +57,39 @@ class DetailsPage extends StatelessWidget {
                 children: [
                   Text(
                     article.title.toString(),
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 20),
                   ),
-                  const SizedBox(height: 15,),
-                  //TODO : si pas de contenue affiché seuleument l'url
-                  Text(article.content.toString()),
-                  const SizedBox(height: 15,),
-                  Text(article.description.toString()),
                   const SizedBox(
                     height: 15,
                   ),
-                  Text(article.author.toString()),
-                  const SizedBox(height: 15,),
+                  //TODO : si pas de contenue affiché seuleument l'url
+                  Text(
+                    article.content.toString(),
+                    style: const TextStyle(fontSize: 15),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(article.description.toString(), style: const TextStyle(fontSize: 15)),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text("Écrit par : "+article.author.toString(),style: const TextStyle(
+                      fontWeight: FontWeight.bold,),),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   TextButton(
                     onPressed: () => urlLauncher(article.url.toString()),
                     child: Text(article.source.name.toString()),
-                  )
+                  ),
                 ],
               )),
         ],
       ),
     );
   }
-
 
   urlLauncher(String url) async {
     if (await canLaunch(url)) {

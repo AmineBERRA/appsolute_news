@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:appsolute_news/Model/article_model.dart';
 import 'package:http/http.dart';
+import 'package:intl/intl.dart';
 
 /*class ApiNews {
   final newsUrl = "newsapi.org";

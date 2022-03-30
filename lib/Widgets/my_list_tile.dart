@@ -1,8 +1,14 @@
 import 'package:appsolute_news/Model/article_model.dart';
 import 'package:appsolute_news/View/details_news.dart';
+import 'package:appsolute_news/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 Widget myListTile(Article article, BuildContext context) {
+
+  final DateFormat formatter = DateFormat('dd/MM/yyyy');
+  var newDate = formatter.format(DateTime.parse(article.publishedAt.toString()));
+
   return InkWell(
       onTap: () {
         Navigator.push(
@@ -48,23 +54,30 @@ Widget myListTile(Article article, BuildContext context) {
                     ),
                   ),
             const SizedBox(height: 8.0),
-            Text(article.title.toString(),style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+            Text(
+              article.title.toString(),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
             const SizedBox(height: 10.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   padding: const EdgeInsets.all(5.0),
-                  decoration:  BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(12.0)),
-                  child: Text("Source : " + article.source.name.toString(),
-                    style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                  decoration: BoxDecoration(
+                      color: blueAppsolute,
+                      borderRadius: BorderRadius.circular(12.0)),
+                  child: Text(
+                    "Source : " + article.source.name.toString(),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white),
                   ),
                 ),
-
-                Text(article.publishedAt.toString()),
+                Text(newDate,style: const TextStyle(fontSize: 10),),
               ],
             )
           ],
         ),
       ));
+
 }
