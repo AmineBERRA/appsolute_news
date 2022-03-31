@@ -73,7 +73,7 @@ Widget myListTile(Article article, BuildContext context) {
                         fontWeight: FontWeight.bold, color: Colors.white),
                   ),
                 ),
-                Text(newDate,style: const TextStyle(fontSize: 10),),
+                Text(newDate,style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
               ],
             )
           ],

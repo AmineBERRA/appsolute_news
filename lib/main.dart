@@ -1,9 +1,11 @@
 import 'package:appsolute_news/View/list_view.dart';
 import 'package:appsolute_news/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'Controller/api_news.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 

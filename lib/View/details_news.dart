@@ -63,18 +63,11 @@ class DetailsPage extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  //TODO : si pas de contenue affiché seuleument l'url
-                  Text(
-                    article.content.toString(),
-                    style: const TextStyle(fontSize: 15),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Text(article.description.toString(), style: const TextStyle(fontSize: 15)),
-                  const SizedBox(
-                    height: 15,
-                  ),
+                  //TODO : si pas de contenue => affiché seuleument l'url
+                  Text(article.description.toString(), style: const TextStyle(fontSize: 15),),
+                  const SizedBox(height: 15,),
+                  Text(article.content.toString(), style: const TextStyle(fontSize: 15)),
+                  const SizedBox(height: 15,),
                   Text("Écrit par : "+article.author.toString(),style: const TextStyle(
                       fontWeight: FontWeight.bold,),),
                   const SizedBox(
