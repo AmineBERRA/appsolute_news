@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "457160284239",
+    "project_id": "appsolutenews-65432",
+    "storage_bucket": "appsolutenews-65432.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457160284239:android:b26c0e98fca56f6dcc323a",
+        "android_client_info": {
+          "package_name": "com.example.appsolute_news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457160284239-a0b06oqdf3g1v2p1n3r58g385r9o2sfr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6xwCIVeGfBmud96X5IsKZ74_YGt3Ja8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457160284239-a0b06oqdf3g1v2p1n3r58g385r9o2sfr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

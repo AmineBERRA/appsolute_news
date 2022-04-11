@@ -1,15 +1,12 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:appsolute_news/Model/article_model.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart';
-
-
 
 class ApiService {
 
   final endPointUrl =
-      "https://newsapi.org/v2/top-headlines?country=fr&apiKey={$dotenv['API_KEY']}";
+      "https://newsapi.org/v2/top-headlines?country=fr&apiKey=74328c8fd614415790aa053a2269b5f6";
   Future<List<Article>> getArticle() async {
     Response res = await get(Uri.parse(endPointUrl));
     log(res.toString());
